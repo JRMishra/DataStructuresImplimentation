@@ -84,6 +84,20 @@ namespace DataStructuresImplimentation
             }
         }
 
+        public int FindNode(T value)
+        {
+            Node<T> temp = head;
+            int position=1;
+
+            while(!temp.data.Equals(value) && temp.next!=null)
+            {
+                temp = temp.next;
+                position++;
+            }
+            
+            return temp.data.Equals(value) ? position : -1;
+        }
+
         public void Display()
         {
             Node<T> temp = this.head;
