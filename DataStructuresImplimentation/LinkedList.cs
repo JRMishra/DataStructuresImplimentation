@@ -67,6 +67,23 @@ namespace DataStructuresImplimentation
             head = head.next;
         }
 
+        public void DeleteLastElement()
+        {
+            Node<T> temp = head;
+            int i = 1;
+            if (Length == 1)
+                head = null;
+            else
+            {
+                while (i < Length)
+                {
+                    temp = temp.next;
+                    i++;
+                }
+                temp.next = null;
+            }
+        }
+
         public void Display()
         {
             Node<T> temp = this.head;
