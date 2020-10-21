@@ -13,6 +13,7 @@ namespace DataStructuresImplimentation
             linkedList.Add(30);
             linkedList.Add(70);
             linkedList.Insert(2, 56);
+            linkedList.DeleteFirstElement();
             linkedList.Display();
         }
     }

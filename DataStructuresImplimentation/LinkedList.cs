@@ -62,6 +62,11 @@ namespace DataStructuresImplimentation
             Console.WriteLine($"{node.data} inserted at a position {insertionPosition}");
         }
 
+        public void DeleteFirstElement()
+        {
+            head = head.next;
+        }
+
         public void Display()
         {
             Node<T> temp = this.head;
