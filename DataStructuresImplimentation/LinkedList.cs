@@ -7,9 +7,10 @@ namespace DataStructuresImplimentation
     class LinkedList<T>
     {
         internal Node<T> head;
-        int Length { get; set; } = 0;
+        int _length=0;
+        public int Length { get => _length; } 
 
-        internal void Add(T data)
+        public void Add(T data)
         {
             Node<T> node = new Node<T>(data);
             if (this.head == null)
@@ -22,7 +23,7 @@ namespace DataStructuresImplimentation
                 temp.next = node;
                 Console.WriteLine($"{node.data} inserted into Linked List");
             }
-            Length++;
+            _length++;
         }
 
         
