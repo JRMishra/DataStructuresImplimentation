@@ -26,6 +26,12 @@ namespace DataStructuresImplimentation
             _length++;
         }
 
-        
+        public void Append(T[] datas)
+        {
+            foreach(T data in datas)
+            {
+                Add(data);
+            }
+        }
     }
 }
