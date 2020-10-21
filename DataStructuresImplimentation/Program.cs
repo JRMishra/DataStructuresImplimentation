@@ -21,9 +21,11 @@ namespace DataStructuresImplimentation
             linkedList.Display();
             linkedList.DeleteLastElement();
             linkedList.Display();
-            Console.WriteLine(linkedList.FindNode(56));
-            Console.WriteLine(linkedList.FindNode(62));
-            Console.WriteLine(linkedList.FindNode(16));
+            Console.WriteLine(linkedList.FindNodePosition(56));
+            Console.WriteLine(linkedList.FindNodePosition(62));
+            Console.WriteLine(linkedList.FindNodePosition(16));
+            linkedList.InsertAfterValue(62, 44);
+            linkedList.Display();
         }
     }
 }

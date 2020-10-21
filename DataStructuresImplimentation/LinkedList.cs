@@ -65,6 +65,7 @@ namespace DataStructuresImplimentation
         public void DeleteFirstElement()
         {
             head = head.next;
+            _length--;
         }
 
         public void DeleteLastElement()
@@ -82,9 +83,10 @@ namespace DataStructuresImplimentation
                 }
                 temp.next = null;
             }
+            _length--;
         }
 
-        public int FindNode(T value)
+        public int FindNodePosition(T value)
         {
             Node<T> temp = head;
             int position=1;
@@ -96,6 +98,15 @@ namespace DataStructuresImplimentation
             }
             
             return temp.data.Equals(value) ? position : -1;
+        }
+
+        public void InsertAfterValue(T insertAfter, T valueToInsert)
+        {
+            int position = FindNodePosition(insertAfter);
+            if(position!=-1)
+            {
+                Insert(position + 1, valueToInsert);
+            }
         }
 
         public void Display()
