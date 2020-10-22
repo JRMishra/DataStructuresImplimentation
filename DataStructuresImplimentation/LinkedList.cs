@@ -109,6 +109,22 @@ namespace DataStructuresImplimentation
             }
         }
 
+        public void DeleteAValue(T value)
+        {
+            int position = FindNodePosition(value);
+            if (position == -1)
+                return;
+            if (position == 1)
+                head = head.next;
+            else
+            {
+                Node<T> temp = head;
+                while (!temp.next.data.Equals(value))
+                    temp = temp.next;
+                temp.next = temp.next.next;
+            }
+        }
+
         public void Display()
         {
             Node<T> temp = this.head;
