@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructuresImplimentation
 {
-    class LinkedList<T>
+    public class MyLinkedList<T>
     {
         internal Node<T> head;
         int _length=0;

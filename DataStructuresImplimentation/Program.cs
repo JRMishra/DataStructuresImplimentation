@@ -9,7 +9,7 @@ namespace DataStructuresImplimentation
             Console.WriteLine("Welcome to Stack Operation Implimentation Program");
             Console.WriteLine("==================================================");
 
-            LinkedList<int> linkedList = new LinkedList<int>();
+            MyLinkedList<int> linkedList = new MyLinkedList<int>();
             linkedList.Add(30);
             linkedList.Add(70);
             linkedList.Add(17);
